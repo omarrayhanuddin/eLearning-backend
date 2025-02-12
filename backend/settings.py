@@ -225,3 +225,5 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
+
+CSRF_TRUSTED_ORIGINS = ['https://elearning-backend-yac0.onrender.com/', '127.0.0.1:8000']
