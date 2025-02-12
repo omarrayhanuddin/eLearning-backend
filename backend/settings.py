@@ -63,6 +63,7 @@ INSTALLED_APPS += THIRD_PARTY_APPS
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.gzip.GZipMiddleware",
@@ -153,6 +154,9 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / 'static'
+if not DEBUG:
+    STATIC_ROOT = BASE_DIR / 'static'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files
 MEDIA_ROOT = BASE_DIR / "media"
