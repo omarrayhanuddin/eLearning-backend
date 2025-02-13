@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    "corsheaders",
     "django_filters",
 ]
 
@@ -226,4 +227,4 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
 
-CSRF_TRUSTED_ORIGINS = ['https://elearning-backend-yac0.onrender.com/', '127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['https://elearning-backend-yac0.onrender.com']
