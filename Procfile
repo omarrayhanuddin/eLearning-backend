@@ -1,0 +1,1 @@
+worker: celery -A backed worker --loglevel=info -c 4
