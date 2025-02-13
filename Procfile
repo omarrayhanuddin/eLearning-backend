@@ -1,1 +1,1 @@
-worker: celery -A backed worker --loglevel=info -c 4
+worker: celery -A backend worker --loglevel=info -c 4
